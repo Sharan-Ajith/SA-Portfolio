@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SimpleCV - CV Template">
+    <meta name="keywords" content="HTML5,CSS3,CV,simple,curriculum vitae,animated,animation,about,contacts,recent work,flat,modern,page,responsive,inspire,inspire.by,template">
+    <meta name="author" content="inspire.by">
+
+    <title>Masha Fashion Blogger CV Recent Works</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="shortcut icon" href="pic/favicon.ico" type="image/x-icon">
+
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="frame-scroll"></div>
+    <div class="frame-scroll-top"></div>
+    <div class="frame-scroll-bottom"></div>
+
+    <div class="container-scroll container-scroll-recent">
+
+        <!--MOBILE NAVIGATION-->
+
+        <div id="id-mobile-nav" class="mobile-nav">
+
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+
+            <nav class="mobile-nav-links">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="experience.html">experience</a>
+                <a href="skills.html">skills</a>
+                <a href="education.html">education</a>
+                <a href="contacts.html">contacts</a>
+            </nav>
+
+            <div class="icons-mobile-nav-footer">
+                <a class="icon-inst-white" href="#"></a>
+                <a class="icon-fb-white" href="#"></a>
+                <a class="icon-twit-white" href="#"></a>
+            </div>
+
+        </div>
+
+        <div class="icon-mobile-nav" onclick="openNav()">
+            <div class="element-icon-nav"></div>
+            <div class="element-icon-nav"></div>
+            <div class="element-icon-nav"></div>
+        </div>
+
+        <!--MODAL PAGE RECENT WORKS-->
+
+        <div id="id-modal" class="modal">
+
+            <span class="close-btn-modal" onclick="closeModal()">&times;</span>
+
+            <div class="modal-content">
+
+                <div class="modal-img">
+                    <img src="pic/recent-img-big.jpg" alt="main recent work image">
+                    <p>Shopping mobile application UI</p>
+                </div>
+
+                <div class="modal-img">
+                    <img src="pic/recent-img-small-top.jpg" alt="second recent work image">
+                    <p>Air Balloon: Responsive animated Error 404 template, available for purchase at only $8 on <a href="#">Themeforest.net</a></p>
+                </div>
+
+                <div class="modal-img">
+                    <img src="pic/recent-img-small-bottom-1.jpg" alt="third recent work image">
+                    <p>HR dashboard concept</p>
+                </div>
+
+                <div class="modal-img">
+                    <img src="pic/recent-img-small-bottom-2.jpg" alt="fourth recent work image">
+                    <p>Responsive e-commerce website for florist's business. See more on <a href="#">Behance</a>.</p>
+                </div>
+
+                <a class="modal-img-prev" onclick="nextImg(-1)">&#10094;</a>
+                <a class="modal-img-next" onclick="nextImg(1)">&#10095;</a>
+
+            </div>
+
+        </div>
+
+        <!--MAIN CONTENT-->
+
+        <section class="recent">
+
+            <div class="recent-head">
+
+                <h2>recent works</h2>
+
+                <div class="icons icons-recent">
+                    <a class="icon-inst" href="#"></a>
+                    <a class="icon-fb" href="#"></a>
+                    <a class="icon-twit" href="#"></a>
+                </div>
+
+            </div>
+
+            <div class="recent-img">
+                <div class="recent-img-big" onclick="openModal();currentImage(1)"></div>
+                <div class="recent-img-small">
+                    <div class="recent-img-small-top" onclick="openModal();currentImage(2)"></div>
+                    <div class="recent-img-small-bottom-1" onclick="openModal();currentImage(3)"></div>
+                    <div class="recent-img-small-bottom-2" onclick="openModal();currentImage(4)"></div>
+                </div>
+            </div>
+
+            <nav class="buttons-min">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="skills.html">skills</a>
+                <a href="experience.html">experience</a>
+                <a href="education.html">education</a>
+                <a href="contacts.html">contacts</a>
+            </nav>
+
+        </section>
+
+    </div>
+
+    <script>
+
+            // Mobile Navigation
+
+            function openNav() {
+            document.getElementById("id-mobile-nav").style.width = "90%";
+            }
+
+            function closeNav() {
+            document.getElementById("id-mobile-nav").style.width = "0";
+            }
+
+
+            // Modal
+
+            function openModal() {
+                document.getElementById('id-modal').style.display = "flex";
+            }
+
+            function closeModal() {
+                document.getElementById('id-modal').style.display = "none";
+            }
+
+            var imgIndex = 1;
+            showImage(imgIndex);
+
+            function nextImg(n) {
+                showImage(imgIndex += n);
+            }
+
+            function currentImage(n) {
+                showImage(imgIndex = n);
+            }
+
+            function showImage(n) {
+                var i;
+                var images = document.getElementsByClassName("modal-img");
+                if (n > images.length) {imgIndex = 1}
+                if (n < 1) {imgIndex = images.length}
+                for (i = 0; i < images.length; i++) {
+                    images[i].style.display = "none";
+                }
+                images[imgIndex-1].style.display = "block";
+            }
+
+    </script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="keywords" content="HTML5,CSS3,CV,simple,curriculum vitae,animated,animation,about,contacts,recent work,flat,modern,page,responsive,inspire,inspire.by,template">
     <meta name="author" content="inspire.by">
 
-    <title>Sharan Ajith - Designer</title>
+    <title>Sharan Ajith - Skills</title>
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -18,13 +18,17 @@
 
     <!--FONT-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="frame">
+    <div class="frame-scroll"></div>
+    <div class="frame-scroll-top"></div>
+    <div class="frame-scroll-bottom"></div>
+
+    <div class="container-scroll">
 
         <!--MOBILE NAVIGATION-->
 
@@ -33,10 +37,10 @@
             <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
 
             <nav class="mobile-nav-links">
+                <a href="index.html">home</a>
                 <a href="about.html">about</a>
                 <a href="recent.html">recent works</a>
                 <a href="experience.html">experience</a>
-                <a href="skills.html">skills</a>
                 <a href="education.html">education</a>
                 <a href="contacts.html">contacts</a>
             </nav>
@@ -57,34 +61,64 @@
 
         <!--MAIN CONTENT-->
 
-        <div class="photo"></div>
+        <a href="index.html" class="photo-min"></a>
 
-        <div class="icons">
+        <div class="icons-min">
             <a class="icon-inst" href="#"></a>
             <a class="icon-fb" href="#"></a>
             <a class="icon-twit" href="#"></a>
         </div>
 
-        <div class="text-heading">
-            <h2>Hello,</h2>
-            <h2>I'm <span>Sharan</span></h2>
-            <h2>Visual Designer</h2>
-        </div>
+        <section class="text-skills">
+            <div class="text-skills-first">
 
-        <nav class="buttons">
-            <div class="buttons-up">
-                <a href="about.html">about</a>
-                <a href="recent.html">recent works</a>
-                <a href="experience.html">experience</a>
+                <h2>skills</h2>
+
+                <ul class="list-skills">
+                    <li>User experience</li>
+                    <li>Visual design</li>
+                    <li>Interaction design</li>
+                    <li>Prototyping</li>
+                    <li>Web & mobile apps design</li>
+                    <li>Icons & illustrations</li>
+                    <li>Branding</li>
+                    <li>Visual guidelines and developers support</li>
+                </ul>
+
             </div>
-            <div class="buttons-bottom">
-                <a href="skills.html">skills</a>
-                <a href="education.html">education</a>
-                <a href="contacts.html">contacts</a>
+
+            <div class="text-skills-second">
+
+                <h2>tools</h2>
+
+                <ul class="list-tools">
+                    <li class="list-tools-adobe">Photoshop, Illustrator</li>
+                    <li class="list-tools-sketch">Sketch, Invision</li>
+                    <li class="list-tools-ux">Balsamiq, Microsoft Visio</li>
+                    <li class="list-tools-pm">Jira, Trello, Slack, RedPen, Basecamp</li>
+                </ul>
+
+                <h2>languages</h2>
+
+                <ul class="list-languages">
+                    <li>English - native</li>
+                    <li>German - advanced spoken and written</li>
+                </ul>
+
             </div>
+
+        </section>
+
+        <nav class="buttons-min">
+            <a href="recent.html">recent works</a>
+            <a href="about.html">about</a>
+            <a href="experience.html">experience</a>
+            <a href="education.html">education</a>
+            <a href="contacts.html">contacts</a>
         </nav>
 
     </div>
+
 
     <script>
             function openNav() {

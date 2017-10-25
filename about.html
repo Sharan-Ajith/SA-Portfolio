@@ -10,7 +10,7 @@
     <meta name="keywords" content="HTML5,CSS3,CV,simple,curriculum vitae,animated,animation,about,contacts,recent work,flat,modern,page,responsive,inspire,inspire.by,template">
     <meta name="author" content="inspire.by">
 
-    <title>Sharan Ajith - Designer</title>
+    <title>Sharan Ajith - About</title>
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -18,13 +18,17 @@
 
     <!--FONT-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="frame">
+    <div class="frame-scroll"></div>
+    <div class="frame-scroll-top"></div>
+    <div class="frame-scroll-bottom"></div>
+
+    <div class="container-scroll">
 
         <!--MOBILE NAVIGATION-->
 
@@ -33,7 +37,7 @@
             <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
 
             <nav class="mobile-nav-links">
-                <a href="about.html">about</a>
+                <a href="index.html">home</a>
                 <a href="recent.html">recent works</a>
                 <a href="experience.html">experience</a>
                 <a href="skills.html">skills</a>
@@ -57,34 +61,36 @@
 
         <!--MAIN CONTENT-->
 
-        <div class="photo"></div>
+        <a href="index.html" class="photo-min"></a>
 
-        <div class="icons">
+        <div class="icons-min">
             <a class="icon-inst" href="#"></a>
             <a class="icon-fb" href="#"></a>
             <a class="icon-twit" href="#"></a>
         </div>
 
-        <div class="text-heading">
-            <h2>Hello,</h2>
-            <h2>I'm <span>Sharan</span></h2>
-            <h2>Visual Designer</h2>
-        </div>
+        <section class="main-section">
+            <h2>Sharan</h2>
+            <h2>Ajith</h2>
+            <h3>about</h3>
+            <a class="cv-button" href="resume/resume_template.docx">CV</a>
+            <div class="text-about">
+                <p>For more then 7 years Design is my passion. I'm focused on user experience as I think it's really essential in changing environment.</p>
+                <p>I have worked for various companies both in the office and from home, on long-term projects and on multiple tasks at a time. I worked a lot with big enterprise applications and know well how to handle them. I also enjoy bold minimalist design for landing pages, marketing stuff and mobile apps.</p>
+                <p>My education is connected with Business, Design & Animation. Deep knowledge in this area really helps me to predict and affect user’s behaviour.</p>
+            </div>
+        </section>
 
-        <nav class="buttons">
-            <div class="buttons-up">
-                <a href="about.html">about</a>
-                <a href="recent.html">recent works</a>
-                <a href="experience.html">experience</a>
-            </div>
-            <div class="buttons-bottom">
-                <a href="skills.html">skills</a>
-                <a href="education.html">education</a>
-                <a href="contacts.html">contacts</a>
-            </div>
+        <nav class="buttons-min">
+            <a href="recent.html">recent works</a>
+            <a href="experience.html">experience</a>
+            <a href="skills.html">skills</a>
+            <a href="education.html">education</a>
+            <a href="contacts.html">contacts</a>
         </nav>
 
     </div>
+
 
     <script>
             function openNav() {
